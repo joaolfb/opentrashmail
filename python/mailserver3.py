@@ -270,5 +270,6 @@ if __name__ == '__main__':
     logger.info("[i] Discard unknown domains: " + str(DISCARD_UNKNOWN))
     logger.info("[i] Max size of attachments: " + str(ATTACHMENTS_MAX_SIZE))
     logger.info("[i] Listening for domains: " + str(DOMAINS))
-
+    logger.info("[i] Listening for port: " + str(port))
+    
     asyncio.run(run(port))

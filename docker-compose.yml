@@ -1,26 +1,31 @@
 version: '3.9'
 services:
   opentrashmail:
-    image: 'hascheksolutions/opentrashmail:1'
+    image: 'opentrashmail:latest'
+    restart: always
     volumes:
       - './data:/var/www/opentrashmail/data'
       - './logs:/var/www/opentrashmail/logs'
     environment:
       - URL=http://localhost:8080
-      - DOMAINS=example.com
+      - DOMAINS=fakeemail.dev.vodafonesolutions.pt
       - DATEFORMAT=D.M.YYYY HH:mm
-      - SKIP_FILEPERMISSIONS=true
+      - SKIP_FILEPERMISSIONS=false
       - DISCARD_UNKNOWN=false
+      - ADMIN=admin@mail.com
       - ADMIN_ENABLED=true
-      # - ADMIN_PASSWORD=123456
-      # - PASSWORD=123456
+      - ADMIN_PASSWORD=qwerty##2023
+      - SHOW_ACCOUNT_LIST=true
+      - SHOW_LOGS=true
+      - PASSWORD=qwerty##2023
       # - ALLOWED_IPS=192.168.0.0/16,2a02:ab:cd:ef::/60
       # - ATTACHMENTS_MAX_SIZE=10000000
-      # - MAILPORT_TLS=465
-      # - TLS_CERTIFICATE=cert.pem
-      # - TLS_PRIVATE_KEY=key.pem
-      # - WEBHOOK_URL=https://example.com/webhook
+      - MAILPORT_TLS=465
+      - TLS_CERTIFICATE=certs/cert.pem
+      - TLS_PRIVATE_KEY=certs/key.pem
 
     ports:
       - '2525:25'
+      - '587:25'
+      - '465:465'
       - '8080:80'
