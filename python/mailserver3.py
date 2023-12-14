@@ -51,7 +51,7 @@ class CustomHandler:
         # Get the raw email data
         charset = chardet.detect(envelope)
         logger.debug('Charset Detected: %s' % str(charset))
-        raw_email = envelope.content.decode(charset)
+        raw_email = envelope.content.decode(charset.encoding)
 
         # Parse the email
         message = BytesParser(policy=policy.default).parsebytes(envelope.content)
