@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/css/prism.css">
   <link rel="stylesheet" href="/css/opentrashmail.css">
   <title>Open Trashmail</title>
-</head> 
+</head>
 
 <body>
   <div class="topnav" id="OTMTopnav">
