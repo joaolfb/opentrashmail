@@ -75,6 +75,9 @@ class CustomHandler:
                     plaintext += part.get_payload(decode=True).decode('utf-8')
             elif part.get_content_type() == 'text/html':
                 html += part.get_payload(decode=True).decode('utf-8')
+                logger.debug('Charset Detected on HTML: %s' % str(chardet.detect(part.get_payload(decode=True))))
+              
+
             else:
                 att = self.handleAttachment(part)
                 if(att == False):
