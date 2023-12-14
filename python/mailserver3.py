@@ -13,6 +13,7 @@ import configparser
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import logging
+import chardet
 from pprint import pprint
 
 logger = logging.getLogger(__name__)
@@ -48,7 +49,9 @@ class CustomHandler:
         filenamebase = str(int(round(time.time() * 1000)))
 
         # Get the raw email data
-        raw_email = envelope.content.decode('utf-8')
+        charset = chardet.detect(envelope.content)
+        logger.debug('Charset Detected: %s' % str(charset))
+        raw_email = envelope.content.decode(charset)
 
         # Parse the email
         message = BytesParser(policy=policy.default).parsebytes(envelope.content)
