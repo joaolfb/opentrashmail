@@ -49,7 +49,7 @@ class CustomHandler:
         filenamebase = str(int(round(time.time() * 1000)))
 
         # Get the raw email data
-        logger.debug('Data: %s' % envelope)
+        logger.debug('Data: %s' % envelope.content)
         charset = chardet.detect(envelope.content)
         logger.debug('Charset Detected: %s' % str(charset))
         raw_email = envelope.content.decode(charset['encoding'])
@@ -74,7 +74,7 @@ class CustomHandler:
                 else:
                     plaintext += part.get_payload(decode=True).decode('utf-8')
             elif part.get_content_type() == 'text/html':
-                html += part.get_payload()
+                html += part.get_payload().decode('utf-8')
             else:
                 att = self.handleAttachment(part)
                 if(att == False):
