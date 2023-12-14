@@ -49,7 +49,7 @@ class CustomHandler:
         filenamebase = str(int(round(time.time() * 1000)))
 
         # Get the raw email data
-        charset = chardet.detect(envelope.content)
+        charset = chardet.detect(envelope)
         logger.debug('Charset Detected: %s' % str(charset))
         raw_email = envelope.content.decode(charset)
 
