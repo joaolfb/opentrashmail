@@ -108,7 +108,7 @@ function getEmailsOfEmail($email,$includebody=false,$includeattachments=false)
     }
 
     if(is_array($o))
-        ksort($o);
+        krsort($o);
 
     return $o;
 }

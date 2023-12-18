@@ -10,6 +10,8 @@
   <a role="button" class="outline" href="#" id="copyemailbtn" onclick="copyEmailToClipboard();return false;"><i class="far fa-clipboard"></i> Copy address to clipboard</a>
   <a role="button" class="outline" href="/rss/<?= $email ?>" target="_blank"><i class="fas fa-rss"></i> RSS Feed</a>
   <a role="button" class="outline" href="/json/<?= $email ?>" target="_blank"><i class="fas fa-file-code"></i> JSON API</a>
+  <a role="button" class="outline" href="/address/<?= $email; ?>" hx-get="/api/address/<?= $email; ?>" hx-push-url="/address/<?= $email; ?>" hx-target="#main">Refresh</a>
+             
 </div>
 
 <table role="grid">
