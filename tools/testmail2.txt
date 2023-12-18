@@ -1,10 +1,10 @@
 EHLO example.com
-MAIL FROM: <sender@example.com>
-RCPT TO: <recipient@example.com>
+MAIL FROM: <no-reply@vodafonesolutions.pt>
+RCPT TO: <jonas@fakeemail.dev.vodafonesolutions.pt>
 DATA
 Subject: Your Subject
-From: sender@example.com
-To: recipient@example.com
+From: no-reply@vodafonesolutions.pt
+To: jonas@fakeemail.dev.vodafonesolutions.pt
 MIME-Version: 1.0
 Content-Type: multipart/mixed; boundary="boundary-string"
 
