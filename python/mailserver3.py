@@ -73,7 +73,7 @@ class CustomHandler:
             elif part.get_content_type() == 'text/html':
                 charset = chardet.detect(part.get_payload(decode=True))
                 logger.debug('Charset Detected on HTML: %s' % str(chardet.detect(part.get_payload(decode=True))))
-                html += part.get_payload(decode=True).decode(charset)
+                html += part.get_payload(decode=True).decode(str(charset))
           
             else:
                 att = self.handleAttachment(part)
