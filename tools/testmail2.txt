@@ -1,0 +1,91 @@
+EHLO example.com
+MAIL FROM: <sender@example.com>
+RCPT TO: <recipient@example.com>
+DATA
+Subject: Your Subject
+From: sender@example.com
+To: recipient@example.com
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="boundary-string"
+
+--boundary-string
+Content-Type: multipart/alternative; boundary="alternative-boundary"
+
+--alternative-boundary
+Content-Type: text/plain
+
+This is the plaintext part of the email.
+
+--alternative-boundary
+Content-Type: text/html
+
+<html>
+  <body>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><style>
+p, span { text-align:center;}
+</style>
+<p style="margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:&quot;Calibri&quot;,sans-serif;text-align:center;">
+	<strong>
+		<u>
+			<span style="font-size:16px;line-height:107%;">
+				<img src="https://www.vodafonesolutions.pt/assets/img/vodafone_solutions-logo.svg" style="max-width:250px" alt="">
+			</span>
+		</u>
+	</strong>
+</p>
+<p style="margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:&quot;Calibri&quot;,sans-serif;">&nbsp;</p>
+<p style="margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:&quot;Calibri&quot;,sans-serif;">
+	<span>Caro cliente João Lopes Fernandes,</span>
+</p>
+<p style="margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:&quot;Calibri&quot;,sans-serif;">
+	<span>Enviamos infra a declaração para que possa prestar o consentimento acerca da recolha e do tratamento dos seus dados, bem como a Política de Privacidade da Vodafone Solutions.</span>
+</p>
+<br>
+		<p style="margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:&quot;Calibri&quot;,sans-serif;">
+Nome completo: João Lopes Fernandes<br>
+Número de telemóvel: 913070023<br>
+Endereço de email: joao.batista2+12@vodafonesolutions.pt<br>
+Código Postal da morada de residência: 1990-384<br>
+NIF (Número de Identificação Fiscal): 252135326<br>
+		</p>
+		<p style="margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:&quot;Calibri&quot;,sans-serif;">
+			<span>&nbsp;</span>
+		</p>
+		<br>
+			<p style="margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:&quot;Calibri&quot;,sans-serif;">
+				<span>Em seguida, vamos pedir-lhe que assine a documentação através do link abaixo. O código de confirmação para assinatura será enviado por e-mail.</span>
+			</p>
+		<p style="margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:&quot;Calibri&quot;,sans-serif;">
+			<span>
+				<a href="https://eur06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fpos.dev.vodafonesolutions.pt%2Fpos%2Fconsent%2301b15973-8f4c-4278-8b70-e9b5f732aed2&amp;data=05%7C01%7Cjoao.batista2%40vodafonesolutions.pt%7C066226a65982488ad9ef08dbe7cfac09%7C0de26fabcdb1404185be8fff7fe4730e%7C0%7C0%7C638358651351161409%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=jxYAYcKFl3Zb35ls%2F9ESSmiTW4zal4ADOtSEjUd6Lc0%3D&amp;reserved=0" originalsrc="https://pos.dev.vodafonesolutions.pt/pos/consent#01b15973-8f4c-4278-8b70-e9b5f732aed2" shash="LA6K74HzbFuA51tuOfMV5FBblx5FM8D5QcNYErHB0TiYhSot13YddaoJu/jjnJ6YfqzJYPjcc0Tp5EerpNAImqGaJX9oCMLxwlhQzx1zaF1bNPjWXhcZO+bJ7mQAZgtuhIzpyquEwZEJs7nLG1eOhg5Nd8fqMZ7tDCnBNx2bVos=">Consentimentos para tratamento de dados.</a>
+			</span>
+		</p>
+			<p style="margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:&quot;Calibri&quot;,sans-serif;">
+				<br>
+					<span>Atentamente,</span>
+				</p>
+				<p style="margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:&quot;Calibri&quot;,sans-serif;">
+					<span>Vodafone Solutions</span>
+				</p>
+				<p style="margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:&quot;Calibri&quot;,sans-serif;">
+					<span>_____________________________________________________________________________</span>
+				</p>
+				<p style="margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:&quot;Calibri&quot;,sans-serif;">
+					<span style="font-size:13px;line-height:107%;">Este endereço de e-mail destina-se exclusivamente ao envio de comunicações pelo que agradecemos que não responda a esta mensagem.</span>
+				</p>
+				</p>
+  </body>
+</html>
+
+--alternative-boundary--
+
+--boundary-string
+Content-Type: image/svg+xml
+Content-Id: <part1.wUxVdgTp.JyT3JNov@localhost.dev>
+Content-Disposition: attachment; filename="42.svg"
+
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>42</title><path d="M24 12.42l-4.428 4.415H24zm-4.428-4.417l-4.414 4.418v4.414h4.414V12.42L24 8.003V3.575h-4.428zm-4.414 0l4.414-4.428h-4.414zM0 15.996h8.842v4.43h4.412V12.42H4.428l8.826-8.846H8.842L0 12.421z"/></svg>
+
+--boundary-string--
+.
+QUIT
