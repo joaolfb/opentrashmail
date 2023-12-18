@@ -49,7 +49,7 @@ class CustomHandler:
         filenamebase = str(int(round(time.time() * 1000)))
 
         # Get the raw email data
-        raw_email = envelope.content.decode(charset['encoding'])
+        raw_email = envelope.content.decode('UTF-8')
 
         # Parse the email
         message = BytesParser(policy=policy.default).parsebytes(envelope.content)
