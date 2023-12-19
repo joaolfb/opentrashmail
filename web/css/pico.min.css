@@ -189,7 +189,7 @@ kbd {
     --h6-color: #4d606d;
     --muted-color: hsl(205, 10%, 50%);
     --muted-border-color: hsl(205, 20%, 94%);
-    --primary: hsl(8, 89%, 47%);
+    --primary: hsl(210, 89%, 47%);
     --primary-hover: hsl(195, 90%, 32%);
     --primary-focus: rgba(16, 149, 193, 0.125);
     --primary-inverse: #fff;

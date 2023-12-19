@@ -13,7 +13,7 @@
 
 <body>
   <div class="topnav" id="OTMTopnav">
-    <a href="/"><img src="/imgs/logo-50.png" width="50px" /> Open Trashmail <small class="version"><?=getVersion()?></small></a>
+    <a href="/"><img src="/imgs/logo-50.png" width="50px" /> Home <small class="version"><?=getVersion()?></small></a>
     <a><input id="email" hx-post="/api/address" hx-target="#main" name="email" type="email" style="margin-bottom:0px" hx-trigger="input changed delay:500ms" placeholder="email address" aria-label="email address"></a>
     <a href="/random" hx-get="/api/random" hx-target="#main"><i class="fas fa-random"></i> Generate random</a>
     <?php if($this->settings['ADMIN_ENABLED']==true):?><a href="/admin" hx-get="/api/admin" hx-target="#main" hx-push-url="/admin"><i class="fas fa-user-shield"></i> Admin</a><?php endif; ?>

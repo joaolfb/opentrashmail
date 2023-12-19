@@ -2,7 +2,7 @@ EHLO example.com
 MAIL FROM: <no-reply@vodafonesolutions.pt>
 RCPT TO: <jonas@fakeemail.dev.vodafonesolutions.pt>
 DATA
-Subject: Your Subject
+Subject: Email de Teste vodafonesolutions
 From: no-reply@vodafonesolutions.pt
 To: jonas@fakeemail.dev.vodafonesolutions.pt
 MIME-Version: 1.0

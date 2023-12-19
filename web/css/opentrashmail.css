@@ -38,10 +38,16 @@ tr.htmx-swapping td {
     --form-element-spacing-horizontal: 1rem;
 }
 
+:root:not([data-theme="dark"]),
+[data-theme="light"] {
+    --primary: hsl(8, 89%, 47%);
+}
+
 /** dynamic nav bar **/
 
 .topnav {
     overflow: hidden;
+    background-color: red;
 }
 
 .topnav a {
@@ -51,6 +57,7 @@ tr.htmx-swapping td {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    color: white;
 }
 
 .topnav .icon {
