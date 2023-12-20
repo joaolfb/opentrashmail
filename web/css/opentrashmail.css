@@ -48,6 +48,7 @@ tr.htmx-swapping td {
 .topnav {
     overflow: hidden;
     background-color: red;
+    width: 100%;
 }
 
 .topnav a {
@@ -56,7 +57,6 @@ tr.htmx-swapping td {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
     color: white;
 }
 
@@ -119,4 +119,25 @@ tr.htmx-swapping td {
   nav[role="tab-control"] label.active {
     color: var(--primary);
     cursor: pointer;
+  }
+
+  .searchbox{
+    text-align: center;
+    width: 600px;
+    padding: 15px;
+    margin: auto;
+  }
+
+  .searchbox .email input{
+    width: 200px;
+  }
+
+  .presentation{
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .searchButton{
+    max-width: 150px;
+    border-radius: 5rem;
   }
