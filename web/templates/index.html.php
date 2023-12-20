@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/pico.min.css">
-  <link rel="stylesheet" href="css/fontawesome.min.css">
-  <link rel="stylesheet" href="css/prism.css">
-  <link rel="stylesheet" href="css/opentrashmail.css">
+  <link rel="stylesheet" href="/css/pico.min.css">
+  <link rel="stylesheet" href="/css/fontawesome.min.css">
+  <link rel="stylesheet" href="/css/prism.css">
+  <link rel="stylesheet" href="/css/opentrashmail.css">
   <title>Open Trashmail</title>
 </head>
 
