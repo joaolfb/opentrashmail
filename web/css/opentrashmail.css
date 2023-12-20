@@ -130,6 +130,7 @@ tr.htmx-swapping td {
 
   .searchbox .email input{
     width: 200px;
+    height: 50px;
   }
 
   .presentation{
