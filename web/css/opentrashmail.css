@@ -128,9 +128,8 @@ tr.htmx-swapping td {
     margin: auto;
   }
 
-  .searchbox .email input{
-    width: 200px;
-    height: 50px;
+  .searchbox input{
+     height: 70px;
   }
 
   .presentation{
