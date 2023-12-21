@@ -278,16 +278,33 @@ function generateRandomEmail()
     $nouns =  getNames("inc/first_name.csv");
     $adjectives = getNames("inc/last_name.csv");
     
-    $domains = array('fakeemail.dev.vodafonesolutions.pt');
-    $dom = $domains[array_rand($domains)];
-    
-    $dom = str_replace('*', $nouns[array_rand($nouns)], $dom);
+    $settings=loadSettings();
+    $allowedDomains=$settings['DOMAINS'];
+    //$domains = array('fakeemail.dev.vodafonesolutions.pt');
 
-    while (strpos($dom, '*') !== false) {
-        $dom = str_replace('*', $nouns[array_rand($nouns)], $dom);
+    if (strlen($allowedDomains)>0)
+    {
+        $domains=explode(',',$allowedDomains);
+        if (count($domains)>0){
+            
+            $dom = $domains[array_rand($domains)];
+    
+            $dom = str_replace('*', $nouns[array_rand($nouns)], $dom);
+        
+            while (strpos($dom, '*') !== false) {
+                $dom = str_replace('*', $nouns[array_rand($nouns)], $dom);
+            }
+        
+            return $adjectives[array_rand($adjectives)] . '.' . $nouns[array_rand($nouns)].'@'.$dom;
+        }
+        else{
+            return 'Invalid Domain Variable';
+        }
+    }
+    else{
+        return 'Invalid Domain Variable';
     }
 
-    return $adjectives[array_rand($adjectives)] . '.' . $nouns[array_rand($nouns)].'@'.$dom;
 }
 
 function removeScriptsFromHtml($html) {
