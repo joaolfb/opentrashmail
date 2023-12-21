@@ -273,22 +273,23 @@ function getNames($file_name)
     return $array;
 }
 
+//print_r(getNames("inc/first_name.csv"));
 
 function generateRandomEmail()
 {
     
-    $nouns =  getNames("/inc/first_name.csv");
-    $adjectives = getNames("/inc/last_name.csv");
+    $nouns =  getNames("inc/first_name.csv");
+    $adjectives = getNames("inc/last_name.csv");
     
     $settings = loadSettings();
     $domains = explode(',', $settings['DOMAINS']);
     $dom = $domains[array_rand($domains)];
     
     $dom = str_replace('*', $nouns[array_rand($nouns)], $dom);
+
     while (strpos($dom, '*') !== false) {
         $dom = str_replace('*', $nouns[array_rand($nouns)], $dom);
     }
-
 
     return $adjectives[array_rand($adjectives)] . '.' . $nouns[array_rand($nouns)].'@'.$dom;
 }

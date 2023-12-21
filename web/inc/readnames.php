@@ -18,7 +18,6 @@ function generateRandomEmail()
     
     $nouns =  getNames("first_name.csv");
     $adjectives = getNames("last_name.csv");
-    
 
     $domains[] = 'fakeemail.dev.vodafonesolutions.pt';
     $dom = $domains[array_rand($domains)];
@@ -27,7 +26,6 @@ function generateRandomEmail()
     while (strpos($dom, '*') !== false) {
         $dom = str_replace('*', $nouns[array_rand($nouns)], $dom);
     }
-
 
     return $adjectives[array_rand($adjectives)] . '.' . $nouns[array_rand($nouns)].'@'.$dom;
 }
