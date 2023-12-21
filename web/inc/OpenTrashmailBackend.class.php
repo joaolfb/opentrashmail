@@ -199,7 +199,7 @@ class OpenTrashmailBackend{
             return $this->error('Invalid email address');
 
         // check if the domain is allowed
-        $domains=array('fakeemail.dev.vodafonesolutions.com');
+        $domains=array('fakeemail.dev.vodafonesolutions.pt');
         $token ='@';
         $eamil_domain = explode($token,$email);
         if (!in_array($eamil_domain[1], $domains))
