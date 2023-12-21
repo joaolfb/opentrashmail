@@ -197,6 +197,14 @@ class OpenTrashmailBackend{
     {
         if(!filter_var($email, FILTER_VALIDATE_EMAIL))
             return $this->error('Invalid email address');
+
+        // check if the domain is allowed
+        $domains= $this->settings['DOMAINS'];
+        $token ='@';
+        $eamil_domain = explode($token,$email);
+        if (!in_array($eamil_domain[1], $domains))
+            return $this->error('Invalid email Domain');
+
         $emails = getEmailsOfEmail($email);
         //var_dump($emails);
         return $this->renderTemplate('email-table.html',[

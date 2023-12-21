@@ -30,6 +30,17 @@ function generateRandomEmail()
     return $adjectives[array_rand($adjectives)] . '.' . $nouns[array_rand($nouns)].'@'.$dom;
 }
 
-echo generateRandomEmail();
+//echo generateRandomEmail();
+$domains= array('sapo.pt','vodafonesolutions.com','gmail.com');
+$token ='@';
+$eamil_domain = explode($token,"jonas.bffdf@vodafonesolutions.com");
+
+if (in_array($eamil_domain[1], $domains))
+  {
+  echo "Match found";
+  }
+  else{
+    echo "Not found";
+  }
 
 ?>
