@@ -277,8 +277,8 @@ function getNames($file_name)
 function generateRandomEmail()
 {
     
-    $nouns =  getNames("first_name.csv");
-    $adjectives = getNames("last_name.csv");
+    $nouns =  getNames("/inc/first_name.csv");
+    $adjectives = getNames("/inc/last_name.csv");
     
     $settings = loadSettings();
     $domains = explode(',', $settings['DOMAINS']);
