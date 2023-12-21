@@ -273,15 +273,13 @@ function getNames($file_name)
     return $array;
 }
 
-function generateRandomEmail()
+function generateRandomEmail($allowed_domains)
 {
-    
     $nouns =  getNames("inc/first_name.csv");
     $adjectives = getNames("inc/last_name.csv");
     
-   // $settings = loadSettings();
-    $domains = array('fakeemail.dev.vodafonesolutions.pt');
-    $dom = $domains[array_rand($domains)];
+    $domains = $allowed_domains;
+    $dom = $domains[array_rand($allowed_domains)];
     
     $dom = str_replace('*', $nouns[array_rand($nouns)], $dom);
 

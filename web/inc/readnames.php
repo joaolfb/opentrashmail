@@ -1,5 +1,8 @@
 <?php
 
+define('DS', DIRECTORY_SEPARATOR);
+define('ROOT', dirname(__FILE__));
+
 function getNames($file_name)
 {
     $file = fopen($file_name,"r");
@@ -30,6 +33,14 @@ function generateRandomEmail()
     return $adjectives[array_rand($adjectives)] . '.' . $nouns[array_rand($nouns)].'@'.$dom;
 }
 
+function loadSettings()
+{
+    if(file_exists(ROOT.DS.'..'.DS.'config.ini'))
+        return parse_ini_file(ROOT.DS.'..'.DS.'config.ini');
+    return false;
+}
+
+
 //echo generateRandomEmail();
 $domains= array('sapo.pt','vodafonesolutions.com','gmail.com');
 $token ='@';
@@ -42,5 +53,7 @@ if (in_array($eamil_domain[1], $domains))
   else{
     echo "Not found";
   }
+
+echo ROOT.DS.'..'.DS.'config.ini';
 
 ?>
