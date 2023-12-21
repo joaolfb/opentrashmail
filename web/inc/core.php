@@ -278,7 +278,7 @@ function generateRandomEmail($allowed_domains)
     $nouns =  getNames("inc/first_name.csv");
     $adjectives = getNames("inc/last_name.csv");
     
-    $domains = $allowed_domains;
+    $domains = array('fakeemail.dev.vodafonesolutions.pt');
     $dom = $domains[array_rand($allowed_domains)];
     
     $dom = str_replace('*', $nouns[array_rand($nouns)], $dom);

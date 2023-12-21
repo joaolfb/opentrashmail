@@ -31,7 +31,7 @@ class OpenTrashmailBackend{
                 case 'delete':
                     return $this->deleteMail($_REQUEST['email']?:$this->url[2],$_REQUEST['id']?:$this->url[3]);
                 case 'random':
-                    $addr = generateRandomEmail($this->settings['DOMAINS']);
+                    $addr = generateRandomEmail();
                     return $this->listAccount($addr);
                 case 'deleteaccount':
                     return $this->deleteAccount($_REQUEST['email']?:$this->url[2]);
