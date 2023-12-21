@@ -270,14 +270,15 @@ function getNames($file_name)
     }
     fclose($file);
     array_shift($array);
-    return  json_encode($array);
+    return $array;
 }
+
 
 function generateRandomEmail()
 {
     
-    $nouns[] = getNames("first_name.csv");
-    $adjectives[] = getNames("last_name.csv");
+    $nouns =  getNames("first_name.csv");
+    $adjectives = getNames("last_name.csv");
     
     $settings = loadSettings();
     $domains = explode(',', $settings['DOMAINS']);

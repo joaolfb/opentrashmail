@@ -1,9 +1,5 @@
 <?php
 
-//echo getNames("first_name.csv");
-echo "\n"; 
-//echo getNames("last_name.csv");
-
 function getNames($file_name)
 {
     $file = fopen($file_name,"r");
@@ -14,8 +10,28 @@ function getNames($file_name)
     }
     fclose($file);
     array_shift($array);
-    return  json_encode($array);
+    return $array;
 }
 
+function generateRandomEmail()
+{
+    
+    $nouns =  getNames("first_name.csv");
+    $adjectives = getNames("last_name.csv");
+    
+
+    $domains[] = 'fakeemail.dev.vodafonesolutions.pt';
+    $dom = $domains[array_rand($domains)];
+    
+    $dom = str_replace('*', $nouns[array_rand($nouns)], $dom);
+    while (strpos($dom, '*') !== false) {
+        $dom = str_replace('*', $nouns[array_rand($nouns)], $dom);
+    }
+
+
+    return $adjectives[array_rand($adjectives)] . '.' . $nouns[array_rand($nouns)].'@'.$dom;
+}
+
+echo generateRandomEmail();
 
 ?>
