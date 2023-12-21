@@ -273,8 +273,6 @@ function getNames($file_name)
     return $array;
 }
 
-//print_r(getNames("inc/first_name.csv"));
-
 function generateRandomEmail()
 {
     
