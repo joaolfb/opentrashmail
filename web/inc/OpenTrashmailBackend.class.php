@@ -199,20 +199,33 @@ class OpenTrashmailBackend{
             return $this->error('Invalid email address');
 
         // check if the domain is allowed
-        $domains=array('fakeemail.dev.vodafonesolutions.pt');
-        $token ='@';
-        $eamil_domain = explode($token,$email);
-        if (!in_array($eamil_domain[1], $domains))
-            return $this->error('Invalid email Domain');
+        $allowedDomains=$this->settings['DOMAINS'];
 
-        $emails = getEmailsOfEmail($email);
-        //var_dump($emails);
-        return $this->renderTemplate('email-table.html',[
-            'isadmin'=>($this->settings['ADMIN']==$email),
-            'email'=>$email,
-            'emails'=>$emails,
-            'dateformat'=>$this->settings['DATEFORMAT']
-        ]);
+        //get allowed DOMAIN from Variable
+        if (strlen($allowedDomains)>0)
+        {
+            $domainlist=explode(',',$allowedDomains);
+            if (count($domainlist)>0){
+                $token ='@';
+                $email_domain = explode($token,$email);
+                if (!in_array($email_domain[1], $domainlist))
+                    return $this->error('Invalid email Domain');
+        
+                $emails = getEmailsOfEmail($email);
+                //var_dump($emails);
+                return $this->renderTemplate('email-table.html',[
+                    'isadmin'=>($this->settings['ADMIN']==$email),
+                    'email'=>$email,
+                    'emails'=>$emails,
+                    'dateformat'=>$this->settings['DATEFORMAT']
+                ]);
+            }
+        }
+        else{
+            return $this->error('Invalid email domain variable');
+        }
+        
+
     }
 
     public function error($text)

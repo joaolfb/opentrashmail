@@ -40,13 +40,12 @@ function loadSettings()
     return false;
 }
 
-
 //echo generateRandomEmail();
 $domains= array('sapo.pt','vodafonesolutions.com','gmail.com');
 $token ='@';
-$eamil_domain = explode($token,"jonas.bffdf@vodafonesolutions.com");
+$email_domain = explode($token,"jonas.bffdf@vodafonesolutions.com");
 
-if (in_array($eamil_domain[1], $domains))
+if (in_array($email_domain[1], $domains))
   {
   echo "Match found";
   }
@@ -54,6 +53,12 @@ if (in_array($eamil_domain[1], $domains))
     echo "Not found";
   }
 
-echo ROOT.DS.'..'.DS.'config.ini';
-
+  $domains='vodafonesolutions.com';
+  if (strlen($domains)>0)
+  {
+      $list=explode(',',$domains);
+      if (count($list)>0){
+        echo 'Found'.count($list);
+      }
+}
 ?>
