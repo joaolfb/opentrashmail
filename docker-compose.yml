@@ -8,13 +8,13 @@ services:
       - './logs:/var/www/opentrashmail/logs'
     environment:
       - URL=http://localhost:8080
-      - DOMAINS=fakeemail.dev.vodafonesolutions.pt
+      - DOMAINS=fakedomain.com
       - DATEFORMAT=D.M.YYYY HH:mm
       - SKIP_FILEPERMISSIONS=false
       - DISCARD_UNKNOWN=false
       - ADMIN=admin@mail.com
       - ADMIN_ENABLED=true
-      - ADMIN_PASSWORD=qwerty##2023
+      #- ADMIN_PASSWORD=dummy_password_to_replace
       - SHOW_ACCOUNT_LIST=true
       - SHOW_LOGS=true
       #-PASSWORD=qwerty##2023
